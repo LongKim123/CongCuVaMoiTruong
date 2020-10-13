@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#F3F3F4"
+    android:background="#26E6BC"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Thongtinkhachhang">
+    tools:context=".activity.Thongtinkhachhang"
+    >
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+
             android:layout_marginLeft="5dp"
             android:layout_marginTop="35dp"
             android:id="@+id/edittextusername"

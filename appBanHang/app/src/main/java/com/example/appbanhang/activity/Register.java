@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends AppCompatActivity {
-    Button btnLogin ,btnRegister;
+    Button btnLogin;
+    TextView btnRegister;
     EditText edtusername,edtpassword;
     String username="";
     String email="";
@@ -124,7 +126,7 @@ public class Register extends AppCompatActivity {
 
     private void AnhXa() {
         btnLogin=(Button) findViewById(R.id.btnlogin);
-        btnRegister=(Button) findViewById(R.id.btnregister);
+        btnRegister=(TextView) findViewById(R.id.textView2);
         edtpassword=(EditText) findViewById(R.id.edtpassword);
         edtusername=(EditText) findViewById(R.id.edtusername);
     }
