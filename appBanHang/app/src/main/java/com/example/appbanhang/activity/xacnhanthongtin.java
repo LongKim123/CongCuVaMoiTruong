@@ -57,7 +57,7 @@ public class xacnhanthongtin extends AppCompatActivity {
 
         }
         DecimalFormat decimalFomat=new DecimalFormat("###,###,###");
-        tongtien.setText((tongtien1)+" Đ");
+        tongtien.setText(decimalFomat.format(tongtien1)+" Đ");
 
     }
 
@@ -102,6 +102,7 @@ public class xacnhanthongtin extends AppCompatActivity {
                                     jsonObject.put("tensanpham", MainActivity.manggiohang.get(i).getTensp());
                                     jsonObject.put("giasanpham", MainActivity.manggiohang.get(i).getGiasp());
                                     jsonObject.put("soluongsanpham", MainActivity.manggiohang.get(i).getSoluongsp());
+                                    jsonObject.put("dongia",MainActivity.manggiohang.get(i).getGiasp()/MainActivity.manggiohang.get(i).getSoluongsp());
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
