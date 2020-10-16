@@ -97,7 +97,8 @@ public class xacnhanthongtin extends AppCompatActivity {
 
                                 JSONObject jsonObject = new JSONObject();
                                 try {
-
+                                    Intent intent= getIntent();
+                                    String extraname= intent.getStringExtra("username");
                                     jsonObject.put("masanpham", MainActivity.manggiohang.get(i).getIdsp());
                                     jsonObject.put("tensanpham", MainActivity.manggiohang.get(i).getTensp());
                                     jsonObject.put("giasanpham", MainActivity.manggiohang.get(i).getGiasp());

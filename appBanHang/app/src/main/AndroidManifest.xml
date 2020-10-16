@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Session"></activity>
+        <activity android:name=".activity.Order"></activity>
+        <activity android:name=".activity.Session" />
         <activity android:name=".activity.xacnhanthongtin" />
         <activity android:name=".activity.Register">
             <intent-filter>
@@ -32,7 +33,7 @@
         <activity android:name=".activity.ChiTietSanPham" />
         <activity android:name=".activity.DoAnNhanhActivity" />
         <activity android:name=".activity.MonLauActivity" />
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
     </application>
 
 </manifest>
