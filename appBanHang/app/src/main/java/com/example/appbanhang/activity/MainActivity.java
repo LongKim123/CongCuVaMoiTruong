@@ -174,8 +174,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         if(CheckConnection.haveNetworkConnection(getApplicationContext())){
-                            Intent intent= new Intent(MainActivity.this,Quanlysanpham.class);
-                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
+                            Intent intent= new Intent(MainActivity.this,Order.class);
                             startActivity(intent);
                         }
                         else{

@@ -31,14 +31,21 @@ import java.util.Map;
 
 public class xacnhanthongtin extends AppCompatActivity {
     Button btnxacnhanmua;
-    EditText editusername,edtpassword ;
+    static EditText editusername,edtpassword ;
     static TextView tongtien;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xacnhanthongtin);
+        sessionManager = new SessionManager(this);
         Anhxa();
+        HashMap<String,String> user=sessionManager.getUserDetail();
+
+        String memail=user.get(sessionManager.NAME);
+        editusername.setText(memail);
+
         EventUltil();
         btnxacnhanmua.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +104,8 @@ public class xacnhanthongtin extends AppCompatActivity {
 
                                 JSONObject jsonObject = new JSONObject();
                                 try {
-
+                                    Intent intent= getIntent();
+                                    String extraname= intent.getStringExtra("username");
                                     jsonObject.put("masanpham", MainActivity.manggiohang.get(i).getIdsp());
                                     jsonObject.put("tensanpham", MainActivity.manggiohang.get(i).getTensp());
                                     jsonObject.put("giasanpham", MainActivity.manggiohang.get(i).getGiasp());
