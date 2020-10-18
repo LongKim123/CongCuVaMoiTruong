@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10">
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:layout_margin="5dp"
+                    android:id="@+id/img_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:text="Tên Giỏ Hàng"
+                    android:id="@+id/tv_order_sanpham"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:text="Giá Món Hàng"
+                    android:id="@+id/tv_order_gia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_order_soluong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:text="1"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

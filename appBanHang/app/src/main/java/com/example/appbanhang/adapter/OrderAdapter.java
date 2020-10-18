@@ -1,13 +1,17 @@
 package com.example.appbanhang.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.appbanhang.R;
+import com.example.appbanhang.activity.Order_detail;
 import com.example.appbanhang.model.Order;
 
 import java.util.ArrayList;
@@ -48,6 +52,7 @@ public class OrderAdapter extends BaseAdapter {
             viewHolder.emailTv=view.findViewById(R.id.emailTv);
             viewHolder.statusTv=view.findViewById(R.id.statusTv);
             viewHolder.orderDateTv=view.findViewById(R.id.orderDateTv);
+            viewHolder.btn_detail=view.findViewById(R.id.btn_detail);
             view.setTag(viewHolder);
         }
         else{
@@ -67,11 +72,24 @@ public class OrderAdapter extends BaseAdapter {
         {
             viewHolder.statusTv.setTextColor(context.getResources().getColor(R.color.colorRed));
         }
+        viewHolder.btn_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               Toast.makeText(context,String.valueOf(order.getOrderId()),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, Order_detail.class);
+                intent.putExtra("id",order);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                context.startActivity(intent );
+            }
+        });
 
         return view;
     }
     public class ViewHolder{
         public TextView orderIdTv,orderDateTv,emailTv,amountTv,statusTv;
+        public Button btn_detail;
 
 
     }
@@ -87,5 +105,5 @@ public class OrderAdapter extends BaseAdapter {
 //            amountTv=itemView.findViewById(R.id.amountTv);
 //            statusTv=itemView.findViewById(R.id.statusTv);
 //        }
-   // }
+    // }
 }

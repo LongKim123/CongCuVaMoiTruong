@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Order"></activity>
+        <activity android:name=".activity.Detail_Order"></activity>
+        <activity android:name=".activity.Order_detail" />
+        <activity android:name=".activity.Order" />
         <activity android:name=".activity.Session" />
         <activity android:name=".activity.xacnhanthongtin" />
         <activity android:name=".activity.Register">

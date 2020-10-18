@@ -1,6 +1,8 @@
 package com.example.appbanhang.model;
 
-public class Order {
+import java.io.Serializable;
+
+public class Order implements Serializable {
     public int  orderId;
 
     public Order(int orderId) {
