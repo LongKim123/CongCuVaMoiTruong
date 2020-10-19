@@ -65,20 +65,26 @@
 
 
         </LinearLayout>
-        <TextView
-            android:id="@+id/emailTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="email "
-            android:textStyle="bold"
-            android:layout_marginRight="0dp"
-            />
 
-        <Button
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:text="xem chi tiet"
-            android:id="@+id/btn_detail"/>
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email "
+                android:textStyle="bold"
+                android:layout_marginRight="0dp"
+                />
+
+
+            <Button
+
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Chi tiết"
+                android:background="#99FFFF"
+                android:id="@+id/btn_detail"/>
+
+
     </LinearLayout>
 
 

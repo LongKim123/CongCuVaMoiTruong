@@ -64,7 +64,7 @@ public class OrderAdapter extends BaseAdapter {
         viewHolder.statusTv.setText(order.getStatus());
         viewHolder.emailTv.setText("Địa Chỉ:"+order.getOrdermail());
         viewHolder.amountTv.setText("Tổng tiền:"+order.getAmount());
-        if(order.getStatus().equals("Hoàn thành"))
+        if(order.getStatus().equals("Hoàn Thành"))
         {
             viewHolder.statusTv.setTextColor(context.getResources().getColor(R.color.colorAccent));
         }
@@ -76,7 +76,7 @@ public class OrderAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
-               Toast.makeText(context,String.valueOf(order.getOrderId()),Toast.LENGTH_SHORT).show();
+               Toast.makeText(context,String.valueOf("Chi tiết đơn hàng "+order.getOrderId()),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, Order_detail.class);
                 intent.putExtra("id",order);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
