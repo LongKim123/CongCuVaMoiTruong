@@ -186,6 +186,9 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent= new Intent(MainActivity.this,Register.class);
 
                         startActivity(intent);
+                    case 8:
+                        Intent intent1 =new Intent(MainActivity.this,Profile_user.class);
+                        startActivity(intent1);
 
                 }
             }

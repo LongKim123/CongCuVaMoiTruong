@@ -15,6 +15,10 @@ public class SessionManager {
     private static final String LOGIN="IS_LOGIN";
     public static final String NAME="NAME";
     public static final  String EMAIL="EMAIL";
+    public static final  String ADDRESS="ADDRESS";
+    public static final  String PHONE="PHONE";
+
+
 
     public SessionManager(Context context) {
         this.context = context;
@@ -22,10 +26,12 @@ public class SessionManager {
         editor= sharedPreferences.edit();
 
     }
-    public void createsesstion(String name,String email){
+    public void createsesstion(String name,String email,String address,String phone){
         editor.putBoolean(LOGIN,true);
         editor.putString(NAME,name);
         editor.putString(EMAIL,email);
+        editor.putString(ADDRESS,address);
+        editor.putString(PHONE,phone);
         editor.apply();
     }
     public boolean isLoggin(){
@@ -42,6 +48,8 @@ public class SessionManager {
         HashMap<String,String>user= new HashMap<>();
         user.put(NAME,sharedPreferences.getString(NAME,null));
         user.put(EMAIL,sharedPreferences.getString(EMAIL,null));
+        user.put(ADDRESS,sharedPreferences.getString(ADDRESS,null));
+        user.put(PHONE,sharedPreferences.getString(PHONE,null));
         return user;
 
     }

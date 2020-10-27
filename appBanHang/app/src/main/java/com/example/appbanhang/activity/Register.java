@@ -90,10 +90,14 @@ public class Register extends AppCompatActivity {
 
                             String username = object.getString("username").trim();
                             String email = object.getString("email").trim();
-                            sessionManager.createsesstion(username,email);
+                            String address=object.getString("address").trim();
+                            String phone=object.getString("phone").trim();
+                            sessionManager.createsesstion(username,email,address,phone);
                             Intent intent = new Intent(Register.this,MainActivity.class);
                             intent.putExtra("username",username);
                             intent.putExtra("email",email);
+                            intent.putExtra("address",address);
+                            intent.putExtra("phone",phone);
 
                             startActivity(intent);
                             finish();

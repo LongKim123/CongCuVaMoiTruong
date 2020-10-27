@@ -5,8 +5,8 @@ public class Server {
 
     //wifi o nha http://192.168.1.215
     //192.168.43.198
-    //public static String localhost="http://192.168.1.215";
-    public static String localhost="http://192.168.1.114";
+    public static String localhost="http://192.168.1.215";
+    //public static String localhost="http://192.168.1.114";
    // public static String localhost=" http://10.20.61.125";
     public static String Duongdanloaisp =localhost + "/server/getloaisp.php";
     public  static  String Duongdansanphammoinhat =localhost + "/server/getsanphammoinhat.php";
@@ -21,7 +21,7 @@ public class Server {
     public static String chitiet = localhost + "/server/chitiet.php";
     public static String order=localhost+"/server/order_app.php";
     public static String order_detail=localhost+"/server/order_detail.php";
-
+    public static  String profile_user=localhost+"/server/profile_user.php";
 
     public static String Duongdanquanly = localhost + "/server/quanlysanpham.php?page=";
 
