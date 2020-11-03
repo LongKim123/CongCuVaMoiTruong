@@ -43,15 +43,13 @@ public class xacnhanthongtin extends AppCompatActivity {
         Anhxa();
         HashMap<String,String> user=sessionManager.getUserDetail();
 
-        String memail=user.get(sessionManager.NAME);
+        String memail=user.get(sessionManager.EMAIL);
         editusername.setText(memail);
-
         EventUltil();
         btnxacnhanmua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                
                 Xacnhanmua();
             }
         });

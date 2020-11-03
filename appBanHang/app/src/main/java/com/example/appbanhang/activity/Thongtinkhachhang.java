@@ -69,8 +69,14 @@ public class Thongtinkhachhang extends AppCompatActivity {
                                 startActivity(intent);
                                 CheckConnection.ShowToast_Short(getApplicationContext(), "Mời đăng nhập");
                             }
+                            else if(madonhang.trim().equals("err_mail")){
+                                Toast.makeText(getApplicationContext(),"email không hơp lệ",Toast.LENGTH_LONG).show();
+                            }
+                            else if(madonhang.trim().equals("err_phone")){
+                                Toast.makeText(getApplicationContext(),"số điện thoại  không hơp lệ",Toast.LENGTH_LONG).show();
+                            }
                             else {
-                                Toast.makeText(getApplicationContext(),"Login that bai",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Đăng ký thất bại",Toast.LENGTH_LONG).show();
 
                             }
                         }

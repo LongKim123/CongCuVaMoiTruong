@@ -66,7 +66,7 @@ public class Profile_user extends AppCompatActivity {
             public void onResponse(String response) {
                 if (response.trim().equals("1")) {
                     Toast.makeText(Profile_user.this, "Sửa thành công", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Profile_user.this, MainActivity.class));
+                    startActivity(new Intent(Profile_user.this, Register.class));
                 } else {
                     Toast.makeText(Profile_user.this, "Sửa thất bại", Toast.LENGTH_SHORT).show();
                 }
@@ -84,13 +84,10 @@ public class Profile_user extends AppCompatActivity {
                 params.put("name",edtname.getText().toString().trim());
                 params.put("diachi",edt_address.getText().toString().trim());
                 return params;
-
             }
         };
         requestQueue.add(stringRequest);
     }
-
-
         private void Anhxa() {
         name_r=(TextView) findViewById(R.id.tv_namePro);
         mail_r=(TextView) findViewById(R.id.mail_pro);
@@ -99,10 +96,5 @@ public class Profile_user extends AppCompatActivity {
         sua_pro=(ImageView) findViewById(R.id.sua_pro);
         edtname=(EditText) findViewById(R.id.nickname_pro);
         edt_address=(EditText) findViewById(R.id.edt_pro);
-
-
-
-
-
     }
 }

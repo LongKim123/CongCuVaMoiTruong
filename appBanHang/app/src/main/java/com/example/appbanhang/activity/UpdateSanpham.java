@@ -58,6 +58,7 @@ public class UpdateSanpham extends AppCompatActivity {
                 String motasp=suamota.getText().toString().trim();
                 if(ten.matches("")||hinh.matches("")||gia.equals("")||idsp.equals("")||motasp.matches("")){
                     Toast.makeText(UpdateSanpham.this,"Vui lòng nhập cho đầy đủ",Toast.LENGTH_SHORT).show();
+                    
                 }
                 else {
                     Capnhatsanpham(urlupdate);
